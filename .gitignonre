@@ -1,6 +1,0 @@
-# large data
-./largedata/*
-
-# slurm
-*.err
-*.out

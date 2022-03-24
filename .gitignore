@@ -1,5 +1,6 @@
 # large data
 ./largedata/*
+largedata/*
 
 # slurm
 *.err
