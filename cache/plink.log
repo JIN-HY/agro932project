@@ -1,0 +1,33 @@
+PLINK v1.90b4 64-bit (20 Mar 2017)
+Options in effect:
+  --bfile largedata/SAP
+  --indep-pairwise 50 10 0.1
+
+Hostname: c1107.rhino.hcc.unl.edu
+Working directory: /work/schnablelab/hongyujin/agro932project
+Start time: Thu Apr  7 13:32:51 2022
+
+Random number seed: 1649356371
+193244 MB RAM detected; reserving 96622 MB for main workspace.
+569305 variants loaded from .bim file.
+358 people (0 males, 0 females, 358 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to plink.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 358 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+569305 variants and 358 people pass filters and QC.
+Note: No phenotypes present.
+Pruned 47005 variants from chromosome 1, leaving 12989.
+Pruned 49821 variants from chromosome 2, leaving 14440.
+Pruned 51736 variants from chromosome 3, leaving 13824.
+Pruned 44894 variants from chromosome 4, leaving 11156.
+Pruned 58077 variants from chromosome 5, leaving 15772.
+Pruned 38611 variants from chromosome 6, leaving 9131.
+Pruned 39049 variants from chromosome 7, leaving 11875.
+Pruned 39958 variants from chromosome 8, leaving 11990.
+Pruned 36867 variants from chromosome 9, leaving 10847.
+Pruned 41029 variants from chromosome 10, leaving 10234.
+Pruning complete.  447047 of 569305 variants removed.
+Marker lists written to plink.prune.in and plink.prune.out .
+
+End time: Thu Apr  7 13:32:54 2022
