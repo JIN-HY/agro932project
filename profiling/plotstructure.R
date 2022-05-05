@@ -19,3 +19,14 @@ g_result[g_result$V1.x == "PI_564163", ]
 g_result$bicolor <- g_result$grp==4
 
 write.table(g_result, "cache/subpopulation.csv", quote = F, sep = ",", row.names=F)
+
+
+pca <- read.table("cache/SAP.chr02.eigenvec", header=T)
+pdf("plot/pc1pc2.pdf")
+plot(pca$PC1, pca$PC2, xlab="PC1", ylab="PC2")
+outliers <- pca[pca$PC1 < -0.2,]
+text(outliers$PC1, outliers$PC2, labels = outliers$FID, adj = c(0,0))
+dev.off()
+
+outliergrp <- g_result[gsub('_', '', g_result$V1.x) %in% outliers$FID,]
+write.table(outliergrp[,c(2,8:13)], "cache/outliers.csv", quote = F, sep = ",", row.names=F)
