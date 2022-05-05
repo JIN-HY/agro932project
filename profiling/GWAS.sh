@@ -23,5 +23,5 @@ sed 's/,/\t/g' data/DaysToBloom_HNblup.csv | sed 's/_//g' | sed 's/"//g' |tail -
 sed 's/,/\t/g' data/DaysToBloom_LNblup.csv | sed 's/_//g' | sed 's/"//g' | tail -n +2> cache/phenoLN.txt
 
 # GWAS in home directory
-gemma -bfile largedata/newSAP/SAP.chr02 -c cache/pc3.txt -k cache/SAP.chr02.cXX.txt -p cache/phenoHN.txt -lmm 4 -n 2 -o FloweringTimeHN -miss 0.8 -r2 1 -hwe 0 -maf 0.04
-gemma -bfile largedata/newSAP/SAP.chr02 -c cache/pc3.txt -k cache/SAP.chr02.cXX.txt -p cache/phenoLN.txt -lmm 4 -n 2 -o FloweringTimeLN -miss 0.8 -r2 1 -hwe 0 -maf 0.04
+gemma -bfile largedata/newSAP/SAP.chr02 -c cache/pc3.txt -k cache/SAP.chr02.cXX.txt -p cache/phenoHN.txt -lmm 4 -n 2 -o FloweringTimeHN -miss 0.1 -r2 1 -hwe 0 -maf 0.04
+gemma -bfile largedata/newSAP/SAP.chr02 -c cache/pc3.txt -k cache/SAP.chr02.cXX.txt -p cache/phenoLN.txt -lmm 4 -n 2 -o FloweringTimeLN -miss 0.1 -r2 1 -hwe 0 -maf 0.04
