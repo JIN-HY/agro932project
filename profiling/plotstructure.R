@@ -27,6 +27,9 @@ plot(pca$PC1, pca$PC2, xlab="PC1", ylab="PC2")
 outliers <- pca[pca$PC1 < -0.2,]
 text(outliers$PC1, outliers$PC2, labels = outliers$FID, adj = c(0,0))
 dev.off()
+outlierchr2 <- pca[,c(1,3)]
+outlierchr2$outlier <- outlierchr2$PC1<-0.2
+write.table(outlierchr2, "cache/outliers.chr2.csv", quote = F, sep = ",", row.names=F)
 
 #outliergrp <- g_result[gsub('_', '', g_result$V1.x) %in% outliers$FID,]
 #write.table(outliergrp[,c(2,8:13)], "cache/outliers.csv", quote = F, sep = ",", row.names=F)
