@@ -28,5 +28,10 @@ outliers <- pca[pca$PC1 < -0.2,]
 text(outliers$PC1, outliers$PC2, labels = outliers$FID, adj = c(0,0))
 dev.off()
 
-outliergrp <- g_result[gsub('_', '', g_result$V1.x) %in% outliers$FID,]
-write.table(outliergrp[,c(2,8:13)], "cache/outliers.csv", quote = F, sep = ",", row.names=F)
+#outliergrp <- g_result[gsub('_', '', g_result$V1.x) %in% outliers$FID,]
+#write.table(outliergrp[,c(2,8:13)], "cache/outliers.csv", quote = F, sep = ",", row.names=F)
+# need to get outliers and others in 1 single file
+outliergrp <- g_result[,c(2,13,14)]
+outliergrp$outlier <- outliergrp[gsub('_', '', outliergrp$V1.x) %in% outliers$FID]
+colnames(outliergrp) <- c("genotype", "grp", "bicolor", "outlier")
+write.table(outliergrp, "cache/outliers.csv", quote = F, sep = ",", row.names=F)
